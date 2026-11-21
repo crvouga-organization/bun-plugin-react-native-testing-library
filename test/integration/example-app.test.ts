@@ -5,7 +5,7 @@
  * each run does not pay for a fresh `bun install` (~3–15s).
  */
 
-import { describe, expect, test } from "bun:test";
+import { beforeAll, describe, expect, test } from "bun:test";
 import { createElement } from "react";
 import { Pressable, Text, View } from "react-native";
 import { render } from "@testing-library/react-native";
@@ -93,8 +93,11 @@ function writeBunfig(withPreload: boolean): void {
 }
 
 describe("integration: example-app under bun test", () => {
+  // A cold install of the React Native sandbox can take minutes on a fresh CI runner.
+  // Do it once up front so each test's timeout only covers what it asserts.
+  beforeAll(ensureCachedInstall, 300_000);
+
   test("with preload: suite passes", async () => {
-    await ensureCachedInstall();
     syncExampleApp();
     writeBunfig(true);
 
@@ -107,7 +110,6 @@ describe("integration: example-app under bun test", () => {
   }, 60_000);
 
   test("without preload: suite fails (negative control)", async () => {
-    await ensureCachedInstall();
     syncExampleApp();
     writeBunfig(false);
 
