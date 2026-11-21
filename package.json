@@ -20,11 +20,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crvouga/bun-plugin-react-native-testing-library.git"
+    "url": "git+https://github.com/crvouga-organization/bun-plugin-react-native-testing-library.git"
   },
-  "homepage": "https://github.com/crvouga/bun-plugin-react-native-testing-library#readme",
+  "homepage": "https://github.com/crvouga-organization/bun-plugin-react-native-testing-library#readme",
   "bugs": {
-    "url": "https://github.com/crvouga/bun-plugin-react-native-testing-library/issues"
+    "url": "https://github.com/crvouga-organization/bun-plugin-react-native-testing-library/issues"
   },
   "publishConfig": {
     "access": "public",
@@ -69,7 +69,7 @@
     "secrets:check": "bun run scripts/secrets/check-vault.ts && bun run scripts/secrets/check-github.ts",
     "secrets:sync": "bun run scripts/secrets/sync-github.ts",
     "npm:seed": "bun run scripts/seed-npm.ts",
-    "gh": "open https://github.com/crvouga/bun-plugin-react-native-testing-library/actions"
+    "gh": "open https://github.com/crvouga-organization/bun-plugin-react-native-testing-library/actions"
   },
   "peerDependencies": {
     "@testing-library/react-native": ">=14.0.0",

@@ -1,13 +1,13 @@
 # bun-plugin-react-native-testing-library
 
-[![CI](https://github.com/crvouga/bun-plugin-react-native-testing-library/actions/workflows/ci.yml/badge.svg)](https://github.com/crvouga/bun-plugin-react-native-testing-library/actions/workflows/ci.yml)
+[![CI](https://github.com/crvouga-organization/bun-plugin-react-native-testing-library/actions/workflows/ci.yml/badge.svg)](https://github.com/crvouga-organization/bun-plugin-react-native-testing-library/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/bun-plugin-react-native-testing-library.svg)](https://www.npmjs.com/package/bun-plugin-react-native-testing-library)
 
 Bun runtime plugin that makes [`@testing-library/react-native`](https://callstack.github.io/react-native-testing-library/) (RNTL) work under **`bun test`** with **zero Jest** and **zero Metro**.
 
 Requires [Bun](https://bun.sh) `>=1.4.0`. Publishes TypeScript sources (no compile step) — Bun loads them directly.
 
-Repository: https://github.com/crvouga/bun-plugin-react-native-testing-library
+Repository: https://github.com/crvouga-organization/bun-plugin-react-native-testing-library
 
 ## Install
 
