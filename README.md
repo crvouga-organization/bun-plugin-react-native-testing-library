@@ -324,7 +324,7 @@ Do this once so CI can publish. Full checklist: **[docs/SECRETS.md](./docs/SECRE
 
    Alternatively, set a short-lived `NPM_TOKEN` Actions secret; the release job runs `bun run npm:seed -- --ci` and publishes `0.1.0`. Delete the token afterward.
 
-   Then on [package Access](https://www.npmjs.com/package/bun-plugin-react-native-testing-library/access) → Trusted Publisher → GitHub Actions (`crvouga/bun-plugin-react-native-testing-library`, workflow `ci.yml`). Do **not** create an Automation / granular access token for steady-state CI.
+   Then on [package Access](https://www.npmjs.com/package/bun-plugin-react-native-testing-library/access) → Trusted Publisher → GitHub Actions (`crvouga-organization/bun-plugin-react-native-testing-library`, workflow `ci.yml`). Do **not** create an Automation / granular access token for steady-state CI.
 2. Confirm GitHub Actions is enabled and can create releases (default `GITHUB_TOKEN` is enough with this workflow’s permissions). No long-lived `NPM_TOKEN` repo secret.
 3. Ensure the baseline tag exists and is pushed: `v0.1.0` (semver continues from there; the next `feat` publishes `0.2.0`).
 
