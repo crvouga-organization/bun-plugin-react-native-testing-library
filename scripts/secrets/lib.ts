@@ -273,7 +273,7 @@ export const NPM_PACKAGE = "bun-plugin-react-native-testing-library";
 export const NPM_SEED_VERSION = "0.1.0";
 export const NPM_PACKAGE_URL = "https://www.npmjs.com/package/bun-plugin-react-native-testing-library";
 export const NPM_TRUSTED_PUBLISHER_URL = "https://www.npmjs.com/package/bun-plugin-react-native-testing-library/access";
-export const GITHUB_REPO = "crvouga-organization/bun-plugin-react-native-testing-library";
+export const GITHUB_REPO = "crvouga/bun-plugin-react-native-testing-library";
 
 export async function npmViewVersion(name: string): Promise<{ version?: string; missing: boolean; error?: string }> {
   const result = await run(["npm", "view", name, "version", "--registry", "https://registry.npmjs.org"]);

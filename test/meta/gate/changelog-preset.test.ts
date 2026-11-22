@@ -64,7 +64,7 @@ describe("meta: semantic-release changelog preset", () => {
           channel: null,
         },
         options: {
-          repositoryUrl: "https://github.com/crvouga-organization/bun-plugin-react-native-testing-library.git",
+          repositoryUrl: "https://github.com/crvouga/bun-plugin-react-native-testing-library.git",
           tagFormat: `v\${version}`,
         },
         branch: { name: "main" },
