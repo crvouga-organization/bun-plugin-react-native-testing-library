@@ -18,6 +18,7 @@ env:
 
 jobs:
   commitlint:
+    timeout-minutes: 30
     name: Commitlint
     runs-on: ubuntu-latest
     permissions:
@@ -63,6 +64,7 @@ jobs:
             Use a Conventional Commits title, e.g. "feat: add library shim".
 
   check-linux:
+    timeout-minutes: 30
     name: bun check (Linux / Bun 1.4.0)
     needs: [commitlint]
     runs-on: ubuntu-latest
@@ -96,6 +98,7 @@ jobs:
             .compat-out/coverage-manifest.json
 
   check-macos:
+    timeout-minutes: 30
     name: bun check (macOS / Bun latest)
     needs: [commitlint]
     runs-on: macos-latest
@@ -129,6 +132,7 @@ jobs:
             .compat-out/coverage-manifest.json
 
   release:
+    timeout-minutes: 30
     name: Release
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: [commitlint, check-linux, check-macos]
